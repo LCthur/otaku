@@ -8,6 +8,8 @@ gem 'puma'
 gem 'rails', '5.2.3'
 gem 'redis'
 gem 'devise'
+gem 'tzinfo-data'
+gem 'wdm', '>= 0.1.0'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
