@@ -10,3 +10,28 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-inner {
+  background-color: transparent;
+  & a{
+    color:             #11091C;
+    &:hover {
+      color:           #fff;
+    }
+  }
+  & .register {
+    border:             1px solid #11091C;
+    border-radius:      4px;
+    &:hover {
+      background-color: #49429B;
+    }
+  }
+}
+
+.spacing-items {
+  margin-right:    50px;
+}
+
+.avatar {
+  margin-right:20px;
+}
