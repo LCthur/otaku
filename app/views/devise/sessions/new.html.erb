@@ -16,7 +16,8 @@
     <div class="form-actions">
       <%= f.button :submit, "S'authentifier", class: "btn primary-button" %>
     </div>
-      <%= link_to "Mot de passe oublié ?", edit_user_password_path %>
+      <%= link_to "Mot de passe oublié ?", new_user_password_path %> </br>
+      <%= link_to "Pas encore de compte ?", new_user_registration_path %>
     <% end %>
   </div>
 </div>
