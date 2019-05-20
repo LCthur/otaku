@@ -1,5 +1,5 @@
-<div class="container col-4">
-<h2>Se connecter</h2>
+<div class="container col-12 col-lg-4">
+<h1>Se connecter</h1>
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-inputs">
       <%= f.input :email,
@@ -12,11 +12,11 @@
                   label: 'Mot de passe' %>
       <%= f.input :remember_me, label: 'Se souvenir de moi', as: :boolean if devise_mapping.rememberable? %>
     </div>
-  <div class="d-flex justify-content-between">
-     <div class="form-actions">
+  <div class="text-center">
+    <div class="form-actions">
       <%= f.button :submit, "S'authentifier", class: "btn primary-button" %>
     </div>
-    <%= link_to "Mot de passe oublié ?", edit_user_password_path, class: "btn primary-button" %>
-  <% end %>
+      <%= link_to "Mot de passe oublié ?", edit_user_password_path %>
+    <% end %>
   </div>
 </div>

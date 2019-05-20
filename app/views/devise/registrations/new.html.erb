@@ -1,5 +1,5 @@
-<div class="container col-4">
-  <h2>Inscription</h2>
+<div class="container col-12 col-lg-4">
+  <h1>Inscription</h1>
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
 
@@ -8,38 +8,50 @@
           <div class="col-12 col-lg-6">
             <%= f.input :first_name,
                         required: true,
-                        label: 'Prénom' %>
+                        label: 'Prénom',
+                        error: 'Ne peut pas être vide' %>
           </div>
           <div class="col-12 col-lg-6">
             <%= f.input :last_name,
                         required: true,
-                        label: 'Nom' %>
+                        label: 'Nom',
+                        error: 'Ne peut pas être vide' %>
           </div>
       </div>
       <%= f.input :email,
                   required: true,
                   autofocus: true,
-                  input_html: { autocomplete: "email" }%>
-      <%= f.input :password,
+                  input_html: { autocomplete: "email" },
+                  error: 'Ne peut pas être vide'%>
+      <div class="row">
+        <div class="col-12 col-lg-6">
+                  <%= f.input :password,
                   required: true,
                   hint: ("#{@minimum_password_length} charactères minimum" if @minimum_password_length),
                   input_html: { autocomplete: "new-password" },
-                  label: 'Mot de passe' %>
-      <%= f.input :password_confirmation,
+                  label: 'Mot de passe',
+                  error: 'Ne peut pas être vide' %>
+        </div>
+        <div class="col-12 col-lg-6">
+                <%= f.input :password_confirmation,
                   required: true,
                   input_html: { autocomplete: "new-password" },
-                  label: 'Confirmez le mot de passe' %>
+                  label: 'Confirmation',
+                  error: 'Ne correspond pas' %>
+        </div>
+      </div>
       <%= f.input :phone_number,
                   required: true,
                   error: 'Svp utilisez ce format ex:+41 79 123 12 ..',
                   label: 'Numéro de téléphone' %>
       <%= f.input :address,
                   required: true,
-                  label: 'Adresse' %>
+                  label: 'Adresse',
+                  error: 'Ne peut pas être vide' %>
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "S'inscrire", class: "btn primary-button" %>
+      <%= f.button :submit, "S'inscrire", class: "btn primary-button mb-5" %>
     </div>
   <% end %>
 </div>
