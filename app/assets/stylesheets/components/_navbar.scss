@@ -10,3 +10,43 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-inner {
+  background-color:    transparent;
+  color:             #11091C;
+}
+
+.navbar-inner a {
+  color:             #11091C;
+  &:hover {
+    color:           #fff !important;
+  }
+}
+
+.navbar-inner .register {
+  border:             1px solid #11091C;
+  border-radius:      4px;
+  &:hover {
+    background-color: #343a40;
+  }
+}
+.spacing-items {
+  margin-right:    50px;
+}
+
+.avatar {
+  margin-right:20px;
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .navbar-mobile {
+    text-align: center;
+    margin:0 auto;
+  }
+  .register {
+    padding-right:10px;
+    padding-left:10px;
+
+  }
+}
