@@ -14,21 +14,22 @@
 .navbar-inner {
   background-color:    transparent;
   color:             #11091C;
-  & a{
-    color:             #11091C;
-    &:hover {
-      color:           #fff !important;
-    }
-  }
-  & .register {
-    border:             1px solid #11091C;
-    border-radius:      4px;
-    &:hover {
-      background-color: #343a40;
-    }
+}
+
+.navbar-inner a {
+  color:             #11091C;
+  &:hover {
+    color:           #fff !important;
   }
 }
 
+.navbar-inner .register {
+  border:             1px solid #11091C;
+  border-radius:      4px;
+  &:hover {
+    background-color: #343a40;
+  }
+}
 .spacing-items {
   margin-right:    50px;
 }
