@@ -4,6 +4,10 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :first_name,
+                required: true %>
+    <%= f.input :last_name,
+                required: true %>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -16,7 +20,8 @@
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :phone_number,
-                required: true%>
+                required: true,
+                error: 'Please use +41 format ex:+41 79 123 12 ..'%>
     <%= f.input :address,
                 required: true %>
   </div>
