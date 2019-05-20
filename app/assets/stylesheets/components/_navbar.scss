@@ -12,18 +12,19 @@
 }
 
 .navbar-inner {
-  background-color: transparent;
+  background-color:    transparent;
+  color:             #11091C;
   & a{
     color:             #11091C;
     &:hover {
-      color:           #fff;
+      color:           #fff !important;
     }
   }
   & .register {
     border:             1px solid #11091C;
     border-radius:      4px;
     &:hover {
-      background-color: #49429B;
+      background-color: #343a40;
     }
   }
 }
@@ -34,4 +35,17 @@
 
 .avatar {
   margin-right:20px;
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .navbar-mobile {
+    text-align: center;
+    margin:0 auto;
+  }
+  .register {
+    padding-right:10px;
+    padding-left:10px;
+
+  }
 }
