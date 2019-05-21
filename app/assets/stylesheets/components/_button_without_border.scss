@@ -1,7 +1,6 @@
 .btn-no-border {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 22px;
-  padding: 0.75rem 2rem;
+  font-size: $button-font-size;
+  padding: $button-padding;
 }
 
 .btn-no-border:hover {
