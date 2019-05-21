@@ -1,28 +1,18 @@
 <div class="container">
   <h1>Otaku</h1>
 
+  <% @mangas.each do |manga| %>
   <div class="card-product">
     <img src="https://cdn1.booknode.com/book_cover/57/full/one-piece-tome-4-attaque-au-clair-de-lune-56568.jpg">
     <div class="card-product-infos">
-      <h2>One Piece - Tome 4 : Un chemin en pente raide</h2>
-      <span>Auteur : Eiichirō Oda</span>
-      <p>Genre : Roman graphique // Date : 1998</p>
+      <h2><%= manga.serie_name %> - Tome <%= manga.tome_number %> : <%= manga.title %></h2>
+      <span>Auteur : <%= manga.author %></span>
+      <p>Genre : <%= manga.genre %> // Date : <%= manga.publication_date.year %> </p>
     </div>
     <div class="primary-button">
       <%= link_to 'Voir', root_path, class: "btn" %>
     </div>
   </div>
-
-  <div class="card-product">
-    <img src="https://cdn1.booknode.com/book_cover/57/full/one-piece-tome-4-attaque-au-clair-de-lune-56568.jpg">
-    <div class="card-product-infos">
-      <h2>One Piece - Tome 4 : Un chemin en pente raide</h2>
-      <span>Auteur : Eiichirō Oda</span>
-      <p>Genre : Roman graphique // Date : 1998</p>
-    </div>
-    <div class="primary-button">
-      <%= link_to 'Voir', root_path, class: "btn" %>
-    </div>
-  </div>
+  <% end %>
 
 </div>
