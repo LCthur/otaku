@@ -3,7 +3,6 @@
 
   <% @mangas.each do |manga| %>
   <div class="card-product">
-  <%= raise %>
     <%= cl_image_tag manga.photo, class: "img-index-card" %>
     <div class="card-product-infos">
       <h2><%= manga.serie_name %> - Tome <%= manga.tome_number %> : <%= manga.title %></h2>
