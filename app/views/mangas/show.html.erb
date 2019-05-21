@@ -32,24 +32,15 @@
         <a href="#" class="btn primary-button mx-1"><i class="fab fa-twitter"></i></a>
       </div>
     </div>
-    <div class="px-3 share_buttons text-center mt-3">
-      <h1></h1>
-      <a href="#" class="btn primary-button mx-1"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" class="btn primary-button mx-1"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="btn primary-button mx-1"><i class="fab fa-twitter"></i></a>
-    </div>
-  </div>
-  <div class="col-lg-3">
+    <div class="col-lg-3">
     <div class="action-btn p-3">
       <p>Durée du prêt:  <span id="loan_duration"><%= @manga.loan_duration %></span>jours</p>
       <%= simple_form_for([@manga, @loan]) do |f| %>
-        <%= f.input :started_at, as: :date, start_day: Date.today,
-                              end_day: Date.today + 14,
-                              order: [:month, :day],
-                              label: 'Date de retrait'%>
+        <%= f.input :started_at, as: :string, label: 'Date de retrait', input_html: { class: "datepicker" }%>
         <p id="test">Date de retour: <span id="retrait"></span></p>
         <%= f.button :submit, class: "button-otaku", value: 'Emprunter' %>
       <% end %>
     </div>
+  </div>
   </div>
 </div>
