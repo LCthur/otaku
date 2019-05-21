@@ -37,7 +37,8 @@ puts 'Creating mangas...'
     genre: 'Roman graphique',
     pages_number: rand(200..500),
     language: 'Français',
-    user_id: User.all.last.id
+    user_id: User.all.last.id,
+    photo: "gx1a1holbtwzbgll33eu"
   }
   Manga.create!(h)
 end
