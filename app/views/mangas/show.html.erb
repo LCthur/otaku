@@ -26,13 +26,13 @@
   </div>
   <div class="col-lg-3">
     <div class="action-btn p-3 text-center">
-      <p>Durée du prêt :<%= @manga.loan_duration %> jours</p>
+      <p>Durée du prêt:  <span id="loan_duration"><%= @manga.loan_duration %></span>jours</p>
       <%= simple_form_for([@manga, @loan]) do |f| %>
         <%= f.input :started_at, as: :date, start_day: Date.today,
-                              end_day: Date.today.day + 14,
+                              end_day: Date.today + 14,
                               order: [:month, :day],
                               label: 'Date de retrait' %>
-        <%= f.button :submit, class: "button-otaku" %>
+        <%= f.button :submit, class: "button-otaku", value: 'Emprunter' %>
       <% end %>
     </div>
   </div>
