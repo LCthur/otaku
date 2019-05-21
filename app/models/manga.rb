@@ -1,5 +1,5 @@
 class Manga < ApplicationRecord
+  mount_uploader :photo, PhotoUploader
   has_many :loans
   belongs_to :user
-  mount_uploader :photo, PhotoUploader
 end
