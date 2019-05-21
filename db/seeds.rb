@@ -25,6 +25,8 @@ User.create!(h)
 
 puts 'Creating mangas...'
 
+url = "https://res.cloudinary.com/ddzk8vfke/image/upload/v1558439473/jsag8nsxyq2ccp0vbgzu.jpg"
+
 10.times do |i|
   h = {
     title: Faker::JapaneseMedia::OnePiece.akuma_no_mi,
@@ -40,7 +42,9 @@ puts 'Creating mangas...'
     user_id: User.all.last.id,
     loan_duration: 20
   }
-  Manga.create!(h)
+  manga = Manga.new(h)
+  manga.remote_photo_url = url
+  manga.save!
 end
 
 puts 'Finished!'
