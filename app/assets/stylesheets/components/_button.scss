@@ -1,0 +1,16 @@
+.btn {
+  font-size: $button-font-size;
+  padding: $button-padding;
+}
+
+.btn:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #343a40;
+}
+
+.primary-button {
+  border-radius: $border-radius;
+  border: 0.5px solid #343a40;
+  font-weight: $button-font-weight;
+}
