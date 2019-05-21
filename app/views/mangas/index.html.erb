@@ -10,7 +10,7 @@
       <p>Genre : <%= manga.genre %> // Date : <%= manga.publication_date.year %> </p>
     </div>
     <div class="primary-button">
-      <%= link_to 'Voir', root_path, class: "btn" %>
+      <%= link_to 'Voir', manga_path(manga), class: "button-otaku" %>
     </div>
   </div>
   <% end %>
