@@ -25,17 +25,19 @@ User.create!(h)
 
 puts 'Creating mangas...'
 
-url = "https://res.cloudinary.com/ddzk8vfke/image/upload/v1558439473/jsag8nsxyq2ccp0vbgzu.jpg"
+images_urls = %w[g45lspdga2t8smukzshe p73avptyvavdxksu3qms tadcpzyyjff78hifezxg eupjbrqmj7mk9nuodacn cxsly3vwiullksda6jrb q4n7fepfvjmon7dgy2us gx1a1holbtwzbgll33eu xf9yt3zsfzvhe8bqwdwi dg36p4etii51hvs0e843 jsag8nsxyq2ccp0vbgzu]
 
 10.times do |i|
+  url = "https://res.cloudinary.com/ddzk8vfke/image/upload/v1558439473/#{images_urls[i]}.jpg"
+
   h = {
     title: Faker::JapaneseMedia::OnePiece.akuma_no_mi,
     description: Faker::JapaneseMedia::OnePiece.quote,
     author: Faker::JapaneseMedia::OnePiece.character,
     editor: Faker::JapaneseMedia::OnePiece.sea,
-    publication_date: Date.today,
+    publication_date: Date.today - rand(365..3650),
     serie_name: 'One Piece',
-    tome_number: i,
+    tome_number: i+1,
     genre: 'Roman graphique',
     pages_number: rand(200..500),
     language: 'Français',
