@@ -1,9 +1,3 @@
-#home-title {
-  font-weight: 900;
-  text-decoration: none;
-  color: white;
-}
-
 .navbar-lewagon {
   padding: 25px 0 25px 25px;
   justify-content: space-between;
@@ -30,13 +24,6 @@
   }
 }
 
-.navbar-inner .register {
-  border:             1px solid #11091C;
-  border-radius:      4px;
-  &:hover {
-    background-color: #343a40;
-  }
-}
 .spacing-items {
   margin-right:    50px;
 }
@@ -45,16 +32,9 @@
   margin-right:20px;
 }
 
-.button-login {
-  background-color: #11091C;
-  color:white;
-  padding:15px;
-  border-radius:5px;
-  font-size:16px;
-}
 .navbar-nav > li .dropdown-menu {
   background-color: #11091C;
-  margin:0 auto;
+  // margin:0 auto;
 }
 .navbar-nav > li .dropdown-menu > a{ 
   background-color: #11091C;
@@ -66,18 +46,18 @@
   }
 }
 
+#home-title {
+  font-weight: 900;
+  text-decoration: none;
+  &a {
+    color: white;
+  }
+}
+
 @media (max-width: 720px) {
   /* For a screen < 720px, this CSS will be read */
-  .button-login {
-    margin-right:20px;
-  }
-
   .navbar-mobile {
     text-align: center;
     margin:0 auto;
-  }
-  .register {
-    padding-right:10px;
-    padding-left:10px;
   }
 }
