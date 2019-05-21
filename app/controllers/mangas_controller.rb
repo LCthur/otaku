@@ -9,8 +9,20 @@ class MangasController < ApplicationController
   end
 
   def new
+    @manga = Manga.new
   end
 
   def create
+    @manga = Manga.new(manga_params)
+    @manga.user = current_user
+    if @manga.save
+      redirect_to manga_path(@manga)
+    else
+      render :new
+    end
+  end
+
+  def manga_params
+    params.require(:manga).permit(:photo, :title, :photo_cache)
   end
 end
