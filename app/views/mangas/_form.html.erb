@@ -1,6 +1,45 @@
-<%= simple_form_for(manga) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.submit %>
-<% end %>
+<div class="container col-12 col-lg-6">
+  <%= simple_form_for(manga) do |f| %>
+    <div class="form-inputs">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+            <%= f.input :serie_name, label: "Série du manga", required: true, error: 'Ne peut pas être vide' %>
+        </div>
+        <div class="col-12 col-lg-6">
+            <%= f.input :title, label: "Titre du manga", required: true, error: 'Ne peut pas être vide' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-6">
+            <%= f.input :author, label: "Auteur", required: true, error: 'Ne peut pas être vide' %>
+        </div>
+        <div class="col-12 col-lg-6">
+            <%= f.input :editor, label: "Editeur", required: true, error: 'Ne peut pas être vide' %>
+        </div>
+      </div>
+          <%= f.input :description, label: "Description du manga", required: true, error: 'Ne peut pas être vide' %>
+          <%= f.input :publication_date, label: "Date de publication du manga", required: true, error: 'Ne peut pas être vide' %>
+      <div class="row">
+        <div class="col-12 col-lg-6">
+            <%= f.input :tome_number, label: "Le tom", required: true, error: 'Ne peut pas être vide' %>
+        </div>
+        <div class="col-12 col-lg-6">
+            <%= f.input :genre, label: "Le genre", required: true, error: 'Ne peut pas être vide' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-6">
+            <%= f.input :pages_number, label: "Nombre de pages", required: true, error: 'Ne peut pas être vide' %>
+        </div>
+        <div class="col-12 col-lg-6">
+            <%= f.input :language, label: "La langue du manga", required: true, error: 'Ne peut pas être vide' %>
+        </div>
+      </div>      
+      <%= f.input :photo, label: "Photo de votre manga", required: true, error: 'Ne peut pas être vide' %>
+      <%= f.input :photo_cache, as: :hidden %>
+        <div class="form-actions text-center">
+          <%=  f.button :submit, "Mettre en ligne mon manga", class: "btn primary-button mb-5" %>
+        </div>
+    </div>
+  <% end %>
+</div>
