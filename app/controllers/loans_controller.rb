@@ -1,5 +1,4 @@
 class LoansController < ApplicationController
-
   def create
     @loan = Loan.new(loan_params)
     @loan.user = current_user
