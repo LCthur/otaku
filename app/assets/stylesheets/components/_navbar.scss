@@ -1,4 +1,11 @@
+#home-title {
+  font-weight: 900;
+  text-decoration: none;
+  color: white;
+}
+
 .navbar-lewagon {
+  padding: 25px 0 25px 25px;
   justify-content: space-between;
   background: white;
 }
@@ -58,7 +65,6 @@
     opacity: 1;
   }
 }
-
 
 @media (max-width: 720px) {
   /* For a screen < 720px, this CSS will be read */
