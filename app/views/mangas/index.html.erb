@@ -1,14 +1,9 @@
 <div class="container">
   <h1>Otaku</h1>
-<%# <%= console %>
-<%# <% @mangas.each do |manga| %> %>
-  <%# <%= cl_image_tag manga.photo %> %>
-<%# <% end %> %> %>
-<!-- for face detection -->
 
   <% @mangas.each do |manga| %>
   <div class="card-product">
-    <img src="https://cdn1.booknode.com/book_cover/57/full/one-piece-tome-4-attaque-au-clair-de-lune-56568.jpg">
+    <%= cl_image_tag manga.photo, class: "img-index-card" %>
     <div class="card-product-infos">
       <h2><%= manga.serie_name %> - Tome <%= manga.tome_number %> : <%= manga.title %></h2>
       <span>Auteur : <%= manga.author %></span>
