@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_21_140902) do
+ActiveRecord::Schema.define(version: 2019_05_21_154954) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2019_05_21_140902) do
     t.text "description"
     t.string "author"
     t.string "editor"
-    t.date "publication_date"
+    t.string "publication_date"
     t.string "serie_name"
     t.integer "tome_number"
     t.string "genre"
