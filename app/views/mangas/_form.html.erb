@@ -34,12 +34,14 @@
         <div class="col-12 col-lg-6">
             <%= f.input :language, label: "La langue du manga", required: true, error: 'Ne peut pas être vide' %>
         </div>
-      </div>      
-      <%= f.input :photo, label: "Photo de votre manga", required: true, error: 'Ne peut pas être vide' %>
-      <%= f.input :photo_cache, as: :hidden %>
-        <div class="form-actions text-center">
-          <%=  f.button :submit, "Mettre en ligne mon manga", class: "btn primary-button mb-5" %>
-        </div>
+      </div>  
+      <div class="text-center mx-auto">
+        <%= f.input :photo, label: "Photo de votre manga", class: "", required: true, error: 'Ne peut pas être vide' %>
+        <%= f.input :photo_cache, as: :hidden %>
+      </div>    
+      <div class="form-actions text-center">
+        <%=  f.button :submit, "Mettre en ligne mon manga", class: "btn primary-button mb-5" %>
+      </div>
     </div>
   <% end %>
 </div>
