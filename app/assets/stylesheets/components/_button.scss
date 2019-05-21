@@ -1,16 +1,14 @@
-.btn {
+.button-otaku {
   font-size: $button-font-size;
   padding: $button-padding;
-}
-
-.btn:hover {
-  color: white;
-  text-decoration: none;
-  background-color: #343a40;
-}
-
-.primary-button {
+  color: #343a40;
   border-radius: $border-radius;
   border: 0.5px solid #343a40;
   font-weight: $button-font-weight;
+}
+
+.button-otaku:hover {
+  color: white;
+  background-color: #343a40;
+  text-decoration: none;
 }
