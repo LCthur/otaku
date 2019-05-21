@@ -1,21 +1,36 @@
-<div class="row">
-  <div class="col-lg-3">
-    <div class="img">
-      <p><%= cl_image_tag @manga.photo, height: 300, width: 400, crop: :fill %></p>
-    </div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
     <div class="secondary-data">
-      <p>data</p>
+      <div class="img">
+        <p><%= cl_image_tag @manga.photo, height: 400, width: 220, gravity: :center, crop: :crop %></p>
+      </div>
+
+      <ul class="show-secondary-data">
+        <li>Editeur : <%= @manga.editor %></li>
+        <li>Genre : <%= @manga.genre %></li>
+        <li>Date de publication : <%= which_month(@manga.publication_date.month) %> <%= @manga.publication_date.year %></li>
+        <li>Pages : <%= @manga.pages_number %></li>
+        <li>Langue : <%= @manga.language %></li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="col-lg-6">
-    <div class="title p-3">
-    <h1><%= @manga.title %></h1>
-    <h4><%= @manga.title %>: <%= @manga.description %></h4>
-    <h5>Auteur: <%= @manga.author %></h5>
-    </div>
-    <div class="px-3 description mt-3">
-      <h2>Description</h2>
-      <p><%= @manga.description %></p>
+    <div class="col-lg-6">
+      <div class="title p-3">
+        <h1><%= @manga.title %></h1>
+        <h2><%= @manga.serie_name %>, Tome <%= @manga.tome_number %></h2>
+        <p>Auteur : <%= @manga.author %></p>
+      </div>
+      <div class="px-3 description mt-3">
+        <h2>Description</h2>
+        <p><%= @manga.description %></p>
+      </div>
+      <div class="px-3 share_buttons text-center mt-3">
+        <h1></h1>
+        <a href="#" class="btn primary-button mx-1"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="btn primary-button mx-1"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="btn primary-button mx-1"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
     <div class="px-3 share_buttons text-center mt-3">
       <h1></h1>
