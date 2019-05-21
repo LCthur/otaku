@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'Cleaning database...'
-User.destroy_all
 Manga.destroy_all
+User.destroy_all
 
 puts 'Creating an owner...'
 h = {
