@@ -1,9 +1,17 @@
-.btn-no-border {
+.button-otaku-no-border {
   font-size: $button-font-size;
   padding: $button-padding;
+
+  &.clear {
+    opacity: 0.6;
+  }
 }
 
-.btn-no-border:hover {
+.button-otaku-no-border:hover {
   color: white;
   text-decoration: none;
+
+  &.clear {
+    opacity: 1;
+  }
 }
