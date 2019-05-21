@@ -26,7 +26,10 @@ rails<div class="row">
   </div>
   <div class="col-lg-3">
     <div class="action-btn">
-      <a href="#" class="btn primary-btn">Emprunter</a>
+      <%= simple_form_for(@loan) do |f| %>
+        <%= f.input :loan_duration, label: "Durée du prêt", collection: 1..28 %>
+        <%= f.button :submit %>
+      <% end %>
     </div>
   </div>
 </div>

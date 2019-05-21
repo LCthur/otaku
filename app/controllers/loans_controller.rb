@@ -1,8 +1,19 @@
 class LoansController < ApplicationController
   def new
-    @loan = Loan.new
   end
 
   def create
+    @loan = Loan.new(loan_params)
+    @loan.user = current_user
+    @loan.manga = Manga.find(params[:id])
+    if @loan.save
+    else
+    end
+  end
+
+  private
+
+  def loan_params
+    params.(:loan).require(:loan_duration)
   end
 end
