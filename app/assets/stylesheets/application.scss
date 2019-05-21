@@ -10,5 +10,9 @@
 
 // Your CSS partials
 @import "components/index";
-@import "components/index_card";
 @import "pages/index";
+
+body {
+  background-image: linear-gradient(to left, rgba(245, 246, 252, 0.5), rgba(117, 19, 93, 0.5)), url(gold_wallpaper.jpg);
+  background-size: cover;
+}

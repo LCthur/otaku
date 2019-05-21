@@ -18,14 +18,12 @@ $card-height: 120px;
 }
 
 .card-product h2 {
-  font-family: 'Cardo', serif;
   font-size: 22px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-product span {
-  font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
   line-height: 1.4;
   opacity: .7;
@@ -34,7 +32,6 @@ $card-height: 120px;
 }
 
 .card-product p {
-  font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
   line-height: 1.4;
   opacity: .7;
@@ -46,22 +43,8 @@ $card-height: 120px;
   padding: 16px;
 }
 
-.card-product .btn {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 22px;
-  padding: 0.75rem 2rem;
-}
-
-.card-product .btn:hover {
-  color: white;
-  text-decoration: none;
-  background-color: #343a40;
-}
-
-.card-product .show-button {
-  border-radius: 4px;
-  border: 0.5px solid #343a40;
-  font-weight: 100;
+.card-product .primary-button {
   position: absolute;
   right: 50px;
 }
+
