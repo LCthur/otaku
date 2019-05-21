@@ -6,14 +6,11 @@ class LoansController < ApplicationController
     @loan = Loan.new(loan_params)
     @loan.user = current_user
     @loan.manga = Manga.find(params[:id])
-    if @loan.save
-    else
-    end
   end
 
   private
 
   def loan_params
-    params.(:loan).require(:loan_duration)
+    params.require(:loan).permit(:loan_duration)
   end
 end

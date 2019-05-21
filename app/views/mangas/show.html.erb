@@ -25,10 +25,9 @@ rails<div class="row">
     </div>
   </div>
   <div class="col-lg-3">
-    <div class="action-btn">
-      <%= simple_form_for(@loan) do |f| %>
-        <%= f.input :loan_duration, label: "Durée du prêt", collection: 1..28 %>
-        <%= f.button :submit %>
+    <div class="action-btn p-3 text-center">
+      <%= simple_form_for([@manga, @loan]) do |f| %>
+        <%= f.button :submit, class: "button-otaku" %>
       <% end %>
     </div>
   </div>
