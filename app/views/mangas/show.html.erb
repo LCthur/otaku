@@ -1,4 +1,4 @@
-rails<div class="row">
+<div class="row">
   <div class="col-lg-3">
     <div class="img">
       <p>img</p>
@@ -26,9 +26,7 @@ rails<div class="row">
   </div>
   <div class="col-lg-3">
     <div class="action-btn p-3 text-center">
-      <%= simple_form_for([@manga, @loan]) do |f| %>
-        <%= f.button :submit, class: "button-otaku" %>
-      <% end %>
+      <%= link_to "emprunter", manga_loans_path(@manga), method: :post, class: "button-otaku" %>
     </div>
   </div>
 </div>
