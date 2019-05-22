@@ -9,7 +9,7 @@
       <ul class="show-secondary-data">
         <li>Editeur : <%= @manga.editor %></li>
         <li>Genre : <%= @manga.genre %></li>
-        <li>Date de publication : <%= which_month(@manga.publication_date.month) %> <%= @manga.publication_date.year %></li>
+        <li>Date de publication : <%= which_month(@manga.publication_date) %> <%= which_year(@manga.publication_date) %></li>
         <li>Pages : <%= @manga.pages_number %></li>
         <li>Langue : <%= @manga.language %></li>
         </ul>
