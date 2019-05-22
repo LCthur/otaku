@@ -12,3 +12,18 @@
   background-color: #343a40;
   text-decoration: none;
 }
+
+.button-home {
+  font-size: $button-font-size;
+  padding: $button-padding;
+  color: white !important;
+  border-radius: $border-radius;
+  border: 0.5px solid white !important;
+  font-weight: $button-font-weight;
+}
+
+.button-home:hover {
+  color: white !important;
+  background-color: #343a40 !important;
+  text-decoration: none;
+}
