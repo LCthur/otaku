@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-inner navbar-lewagon">
-  
+
 
   <button class="navbar-toggler color-toggle" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon color-toggle"></span>
@@ -23,7 +23,7 @@
           <%= current_user.first_name %>
           </div>
             <div class="dropdown-menu dropdown-menu-right button-otaku" aria-labelledby="navbarDropdown">
-                <%= link_to "Action", "#", class: "dropdown-item" %>
+                <%= link_to "Mes locations", users_loans_path, class: "dropdown-item" %>
                 <%= link_to "Another action", "#", class: "dropdown-item" %>
                 <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "dropdown-item" %>
             </div>
