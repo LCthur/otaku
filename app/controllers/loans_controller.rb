@@ -8,7 +8,7 @@ class LoansController < ApplicationController
     @loan.user = current_user
     @loan.manga = Manga.find(params[:manga_id])
     if @loan.save
-      redirect_to root_path
+      redirect_to users_loans_path
     else
       redirect_to manga_path(@loan.manga)
     end
