@@ -1,2 +1,11 @@
-<h1>Bookings#loans</h1>
-<p>Find me in app/views/bookings/loans.html.erb</p>
+<div class="container col-9">
+  <h1>Mes locations</h1>
+  <ul>
+  <% @loans.each do |loan| %>
+    <li>
+      <%= loan.manga.title %>
+    </li>
+  <% end %>
+  </ul>
+
+</div>
