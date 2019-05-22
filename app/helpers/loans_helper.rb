@@ -1,5 +1,5 @@
 module LoansHelper
-  MONTHS = %w[Janvier Février Mars Avril Mai Juin Juillet Août Septembre Octobre Novembre Décembre]
+  MONTHS = %w[janvier février mars avril mai juin juillet août septembre octobre novembre décembre]
 
   def which_month(string)
     month = string.split('-')[1].to_i
