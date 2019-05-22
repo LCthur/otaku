@@ -9,7 +9,7 @@ $card-height: 100px;
   align-items: center;
   position: relative;
   margin-bottom: 25px;
-  border-radius: 5px;
+  border-radius: $border-radius;
 }
 
 .card-product .img-index-card {
