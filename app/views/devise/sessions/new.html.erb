@@ -13,12 +13,12 @@
       <%= f.input :remember_me, label: 'Se souvenir de moi', as: :boolean if devise_mapping.rememberable? %>
     </div>
   <div class="text-center">
-    <div class="d-flex justify-content-around mb-3">
+    <div class="d-flex align-items-center justify-content-around mb-3">
       <div class="form-actions">
         <%= f.button :submit, "S'authentifier", class: "button-otaku" %>
       </div>
       <div>
-        <%= link_to "Pas de compte ?", new_user_registration_path, class: "button-otaku" %>
+        <%= link_to "Pas de compte ?", new_user_registration_path, class: "btn button-otaku" %>
       </div>
     </div>
       <%= link_to "Mot de passe oublié ?", new_user_password_path %> </br>
