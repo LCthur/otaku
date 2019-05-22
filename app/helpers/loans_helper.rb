@@ -1,9 +1,9 @@
 module LoansHelper
-  MONTHS = %w[janvier février mars avril mai juin juillet août septembre octobre novembre décembre]
+  MONTHS_DOWNCASE = %w[janvier février mars avril mai juin juillet août septembre octobre novembre décembre]
 
-  def which_month(string)
-    month = string.split('-')[1].to_i
-    return MONTHS[month - 1]
+  def which_month_downcased(string)
+    month = string.split(‘-’)[1].to_i
+    return MONTHS_DOWNCASE[month - 1]
   end
 
   def which_year(string)

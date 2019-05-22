@@ -5,4 +5,3 @@ import 'flatpickr/dist/themes/airbnb.css'
 flatpickr(".datepicker", {
   altInput: true
 });
-
