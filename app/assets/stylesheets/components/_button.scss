@@ -5,10 +5,27 @@
   border-radius: $border-radius;
   border: 0.5px solid #343a40;
   font-weight: $button-font-weight;
+  display: table-cell;
+  vertical-align: center;
 }
 
 .button-otaku:hover {
   color: white;
   background-color: #343a40;
+  text-decoration: none;
+}
+
+.button-otaku-dark {
+  font-size: $button-font-size;
+  padding: $button-padding;
+  color: white !important;
+  border-radius: $border-radius;
+  border: 0.5px solid white !important;
+  font-weight: $button-font-weight;
+}
+
+.button-otaku-dark:hover {
+  color: white !important;
+  background-color: #343a40 !important;
   text-decoration: none;
 }
