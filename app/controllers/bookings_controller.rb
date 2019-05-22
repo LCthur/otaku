@@ -5,5 +5,7 @@ class BookingsController < ApplicationController
   end
 
   def lendings
+    @user = current_user
+    @mangas = Manga.where(@user.id == :user_id)
   end
 end

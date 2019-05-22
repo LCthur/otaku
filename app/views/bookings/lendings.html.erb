@@ -1,2 +1,15 @@
-<h1>Bookings#lendings</h1>
-<p>Find me in app/views/bookings/lendings.html.erb</p>
+<div class="container col-9">
+  <h1>Mes Mangas</h1>
+  <div>
+  <% @mangas.each do |manga| %>
+      <div>
+        <%= cl_image_tag manga.photo, class: "img-mangas-card", height: 200, width: 200, gravity: :center, crop: :crop %>
+        <div>
+          <h3><%= manga.serie_name %>: <%= manga.title %></h3>
+          <p>Auteur: <%= manga.author %></p>
+          <p>Loué à: </p>
+        </div>
+      </div>
+  <% end %>
+  </div>
+</div>
