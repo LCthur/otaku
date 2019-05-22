@@ -27,7 +27,7 @@ const flatpickrPageNewManga = () => {
   flatpickr(".datepicker", {
     "locale": French,
     altInput: true,
-    altFormat: "M Y",
+    altFormat: "d M Y",
   });
 }
 
