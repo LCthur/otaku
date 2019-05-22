@@ -7,7 +7,8 @@
         <div>
           <h3><%= manga.serie_name %>: <%= manga.title %></h3>
           <p>Auteur: <%= manga.author %></p>
-          <p>Loué à: </p>
+          <%#= console %>
+          <p>Loué à: <%= manga.loan.last.user.first_name unless manga.loan.nil? %></p>
         </div>
       </div>
   <% end %>
