@@ -1,8 +1,10 @@
 import "bootstrap";
-import flatpickr from 'flatpickr';
-import 'flatpickr/dist/themes/airbnb.css'
+import { flatpickrPageShow, flatpickrPageNewManga } from "../components/date";
 
-flatpickr(".datepicker", {
-  altInput: true
-});
+if(document.getElementById('show')){
+  flatpickrPageShow();
+};
 
+if(document.getElementById('new-manga')){
+  flatpickrPageNewManga();
+};
