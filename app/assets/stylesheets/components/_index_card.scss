@@ -49,15 +49,15 @@ $card-height: 100px;
 }
 
 @media (max-width: 450px) {
-  h2 {
+  .card-product h2 {
     display: none;
   }
 
-  p {
+  .card-product p {
     display: none;
   }
 
-  span {
+  .card-product span {
     display: none;
   }
 
@@ -73,11 +73,11 @@ $card-height: 100px;
 
 @media (max-width: 768px) {
 
-  p {
+  .card-product p {
     display: none;
   }
 
-  span {
+  .card-product span {
     display: none;
   }
 }

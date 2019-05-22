@@ -1,5 +1,5 @@
 .footer {
-    background: #F4F4F4;
+    background: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,16 +13,21 @@
     align-items: center;
   }
   .footer-links a {
-    color: black;
-    opacity: 0.15;
+    color: rgba(0, 0, 0, 0.452);
+    opacity: 0.7;
     text-decoration: none;
     font-size: 24px;
-    padding: 20px 10px;
+    margin-top:20px;
+    padding: 10px 10px;
   }
   .footer-links a:hover {
     opacity: 1;
-  }
-  .footer .fa-heart {
-    color: #D23333;
+    color:#343a40;
   }
   
+  .footer-copyright p{
+      margin-top:-50px;
+      border-top: 1px solid #11091C;
+      padding:15px;
+      color:#343a40;
+  }
