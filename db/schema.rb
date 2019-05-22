@@ -10,14 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_21_083755) do
+ActiveRecord::Schema.define(version: 2019_05_21_154315) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "loans", force: :cascade do |t|
-    t.date "started_at"
-    t.integer "loan_duration"
+    t.string "started_at"
     t.bigint "manga_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
@@ -41,6 +40,7 @@ ActiveRecord::Schema.define(version: 2019_05_21_083755) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "photo"
+    t.integer "loan_duration"
     t.index ["user_id"], name: "index_mangas_on_user_id"
   end
 

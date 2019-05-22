@@ -5,7 +5,7 @@
       <div class="img">
         <p><%= cl_image_tag @manga.photo, height: 400, width: 220, gravity: :center, crop: :crop %></p>
       </div>
-      
+
       <ul class="show-secondary-data">
         <li>Editeur : <%= @manga.editor %></li>
         <li>Genre : <%= @manga.genre %></li>
@@ -33,9 +33,13 @@
       </div>
     </div>
     <div class="col-lg-3">
-      <div class="action-btn">
-        <a href="#" class="btn primary-btn">Emprunter</a>
-      </div>
+    <div class="action-btn p-3">
+      <p>Durée du prêt:  <span id="loan_duration"><%= @manga.loan_duration %></span>jours</p>
+      <%= simple_form_for([@manga, @loan]) do |f| %>
+        <%= f.input :started_at, as: :string, label: 'Date de retrait', class: "dateInput", input_html: { class: "datepicker" }%>
+        <%= f.button :submit, class: "button-otaku", value: 'Emprunter' %>
+      <% end %>
     </div>
+  </div>
   </div>
 </div>
