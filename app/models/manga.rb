@@ -15,5 +15,6 @@ class Manga < ApplicationRecord
   validates :photo, presence: true
 
   def actually_loaned?
+    return loan_state
   end
 end
