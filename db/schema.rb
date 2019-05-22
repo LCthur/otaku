@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_22_130725) do
+ActiveRecord::Schema.define(version: 2019_05_22_131326) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2019_05_22_130725) do
     t.datetime "updated_at", null: false
     t.string "photo"
     t.integer "loan_duration"
-    t.boolean "loan_state"
+    t.boolean "loan_state", default: false
     t.index ["user_id"], name: "index_mangas_on_user_id"
   end
 
