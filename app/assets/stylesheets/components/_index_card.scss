@@ -20,7 +20,7 @@ $card-height: 100px;
 .card-product h2 {
   font-size: 18px;
   font-weight: bold;
-  margin: 0;
+  margin: 0 150px 0 0;
 }
 
 .card-product span {
@@ -48,3 +48,36 @@ $card-height: 100px;
   right: 50px;
 }
 
+@media (max-width: 450px) {
+  h2 {
+    display: none;
+  }
+
+  p {
+    display: none;
+  }
+
+  span {
+    display: none;
+  }
+
+  .card-product .primary-button {
+    position: absolute;
+    right: 30%;
+  }
+
+  .button-otaku {
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  p {
+    display: none;
+  }
+
+  span {
+    display: none;
+  }
+}
