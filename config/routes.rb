@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'bookings/loans'
+  get 'bookings/lendings'
   resources :mangas, only: [:index, :show, :new, :create] do
     resources :loans, only:  [:new, :create]
   end
