@@ -1,0 +1,23 @@
+$card-height: 200px;
+
+.loans-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+
+
+.loans-card {
+  height: $card-height;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  .description-loans-card {
+    padding: 10px;
+  }
+}
+
+
+
+
+
