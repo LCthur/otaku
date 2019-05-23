@@ -10,6 +10,15 @@
             <%= f.input :title, label: "Titre du manga", required: true, error: 'Ne peut pas être vide' %>
         </div>
       </div>
+       <div class="row">
+        <div class="col-12 col-lg-6">
+          <%= f.input :loan_duration , label: "Durée du prêt", required: true, error: 'Ne peut pas être vide' %>
+        </div>
+        <div class="col-12 col-lg-6 d-flex align-items-center">
+          <%= f.input :photo, label: "Photo du manga" %>
+          <%= f.input :photo_cache, as: :hidden %>
+        </div>
+      </div>
       <div class="row">
         <div class="col-12 col-lg-6">
             <%= f.input :author, label: "Auteur", required: true, error: 'Ne peut pas être vide' %>
@@ -35,16 +44,7 @@
         <div class="col-12 col-lg-6">
             <%= f.input :language, label: "La langue du manga", required: true, error: 'Ne peut pas être vide' %>
         </div>
-      </div>  
-      <div class="row text-center mx-auto upload-file">
-        <div class="col-12 col-lg-6">
-          <%= f.input :photo, label: false %>
-        </div>
-        <div class="col-12 col-lg-6">
-          <%= f.label "Photo de votre manga" %>
-          <%= f.input :photo_cache, as: :hidden %>
-        </div>
-      </div>    
+      </div>
       <div class="form-actions text-center">
         <%=  f.button :submit, "Mettre en ligne mon manga", class: "button-otaku mb-5" %>
       </div>
