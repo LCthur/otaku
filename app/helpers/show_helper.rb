@@ -9,8 +9,4 @@ module ShowHelper
   def which_year(string)
     string.split('-').first.to_i
   end
-
-  def empty?(string)
-    string != ""
-  end
 end
