@@ -4,14 +4,7 @@ class Manga < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   validates :serie_name, presence: true
   validates :title, presence: true
-  validates :author, presence: true
-  validates :editor, presence: true
-  validates :description, presence: true
-  validates :publication_date, presence: true
-  validates :tome_number, presence: true
-  validates :genre, presence: true
-  validates :pages_number, presence: true
-  validates :language, presence: true
+  validates :loan_duration, presence: true, inclusion: { in: [7, 14, 21, 28, 35, 42, 49] }
   validates :photo, presence: true
 
   def actually_loaned?
