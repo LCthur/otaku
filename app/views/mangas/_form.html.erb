@@ -19,35 +19,42 @@
           <%= f.input :photo_cache, as: :hidden %>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12 col-lg-6">
-            <%= f.input :author, label: "Auteur", required: false, error: 'Ne peut pas être vide' %>
+      <div class="m-3 text-center">
+        <a  class="button-otaku" data-toggle="collapse" href="#moreOptions" role="button" aria-expanded="false" aria-controls="collapseExample">
+         Plus d'options
+        </a>
+      </div>
+      <div class="collapse" id="moreOptions">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+              <%= f.input :author, label: "Auteur", required: false, error: 'Ne peut pas être vide' %>
+          </div>
+          <div class="col-12 col-lg-6">
+              <%= f.input :editor, label: "Editeur", required: false, error: 'Ne peut pas être vide' %>
+          </div>
         </div>
-        <div class="col-12 col-lg-6">
-            <%= f.input :editor, label: "Editeur", required: false, error: 'Ne peut pas être vide' %>
+            <%= f.input :description, label: "Description du manga", required: false, error: 'Ne peut pas être vide' %>
+            <%= f.input :publication_date, as: :string, label: 'Date de la publication du manga', input_html: { class: "datepicker" }%>
+        <div class="row">
+          <div class="col-12 col-lg-6">
+              <%= f.input :tome_number, label: "Le tome", required: false, error: 'Ne peut pas être vide' %>
+          </div>
+          <div class="col-12 col-lg-6">
+              <%= f.input :genre, label: "Le genre", required: false, error: 'Ne peut pas être vide' %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-6">
+              <%= f.input :pages_number, label: "Nombre de pages", required: false, error: 'Ne peut pas être vide' %>
+          </div>
+          <div class="col-12 col-lg-6">
+              <%= f.input :language, label: "La langue du manga", required: false, error: 'Ne peut pas être vide' %>
+          </div>
         </div>
       </div>
-          <%= f.input :description, label: "Description du manga", required: false, error: 'Ne peut pas être vide' %>
-          <%= f.input :publication_date, as: :string, label: 'Date de la publication du manga', input_html: { class: "datepicker" }%>
-      <div class="row">
-        <div class="col-12 col-lg-6">
-            <%= f.input :tome_number, label: "Le tome", required: false, error: 'Ne peut pas être vide' %>
-        </div>
-        <div class="col-12 col-lg-6">
-            <%= f.input :genre, label: "Le genre", required: false, error: 'Ne peut pas être vide' %>
+        <div class="form-actions text-center">
+          <%=  f.button :submit, "Mettre en ligne mon manga", class: "button-otaku mb-5" %>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12 col-lg-6">
-            <%= f.input :pages_number, label: "Nombre de pages", required: false, error: 'Ne peut pas être vide' %>
-        </div>
-        <div class="col-12 col-lg-6">
-            <%= f.input :language, label: "La langue du manga", required: false, error: 'Ne peut pas être vide' %>
-        </div>
-      </div>
-      <div class="form-actions text-center">
-        <%=  f.button :submit, "Mettre en ligne mon manga", class: "button-otaku mb-5" %>
-      </div>
-    </div>
-  <% end %>
+    <% end %>
 </div>
