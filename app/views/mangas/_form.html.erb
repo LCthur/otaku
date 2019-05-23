@@ -1,3 +1,4 @@
+
 <div class="container col-12 col-lg-6">
     <h1>Prêter son manga</h1>
   <%= simple_form_for(manga) do |f| %>
@@ -12,7 +13,7 @@
       </div>
        <div class="row">
         <div class="col-12 col-lg-6">
-          <%= f.input :loan_duration , label: "Durée du prêt en jours", required: true, error: 'Ne peut pas être vide', :collection =>  [7, 14, 21, 28, 35, 42, 49]%>
+          <%= f.input :loan_duration , label: "Durée du prêt en jours", required: true, error: 'Ne peut pas être vide', :collection =>  [7, 14, 21, 28, 35, 42, 49] %> <!-- Ne pas oublier de synchro avec le model -->
         </div>
         <div class="col-12 col-lg-6 d-flex align-items-center">
           <%= f.input :photo, label: "Photo du manga" %>
