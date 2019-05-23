@@ -1,17 +1,17 @@
-<div class="container">
+<div class="container" id="index-page">
   <h1 id="title-otaku">Otaku</h1>
   <div id="form-search">
     <h2>Trouve ton manga depuis n'importe où</h2>
-    <%= form_tag mangas_path,id: "form-bar", method: :get do %>
+    <%= form_tag mangas_path, id: "form-bar", method: :get do %>
     <%= text_field_tag :query,
             params[:query],
             id: "search-bar",
             class: "form-control",
             placeholder: "Chercher mon manga"
         %>
-        <i class="fas fa-search icons-search"></i>
     <% end %>
   </div>
+  <div id="cards-product">
   <% @mangas.each do |manga| %>
   <% unless manga.actually_loaned? %>
   <div class="card-product">
@@ -27,4 +27,5 @@
   </div>
   <% end %>
   <% end %>
+  </div>
 </div>
