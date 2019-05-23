@@ -1,15 +1,24 @@
 <div class="container col-9">
-  <h1>Mes locations</h1>
+  <h1>Mes emprunts</h1>
+</div>
+<div class="col-12">
   <div class="loans-grid">
   <% @loans.each do |loan| %>
       <div class="loans-card">
-        <%= cl_image_tag loan.manga.photo, class: "img-loans-card", height: 200, width: 200, gravity: :center, crop: :crop %>
+        <%= cl_image_tag loan.manga.photo, class: "img-loans-card", height: 150, width: 100 %>
         <div class="description-loans-card">
-          <h3><%= loan.manga.serie_name %>: <%= loan.manga.title %></h3>
-          <p>Auteur: <%= loan.manga.author %></p>
-          <p>Loué le: <%= which_day(loan.started_at)%> <%= which_month(loan.started_at) %> <%= which_year(loan.started_at) %></p>
+          <h3><%= loan.manga.serie_name %>: <br> <%= loan.manga.title %></h3>
+          <div class="information-manga">
+            <p>Auteur : <%= loan.manga.author %></p>
+            <p>Nombre de pages : <%= loan.manga.pages_number %></p>
+            <p>Loué le : <%= which_day(loan.started_at)%> <%= which_month_downcased(loan.started_at) %> <%= which_year(loan.started_at) %></p>
+          </div>
+          <div class="description-manga">
+              <h3>Description du manga :</h3>
+              <p><%= loan.manga.description %></p>
+          </div>
         </div>
       </div>
   <% end %>
   </div>
-</div>
+<div>
