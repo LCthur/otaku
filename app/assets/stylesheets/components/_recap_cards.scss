@@ -1,20 +1,20 @@
 $card-height: 150px;
 
-.loans-grid {
+.recap-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
 
-.loans-card .description-loans-card p {
+.recap-card .description-recap-card p {
   text-align: center;
   line-height: 7px;
 }
 
-.img-loans-card {
+.img-recap-card {
   margin-left:15px;
 }
-.loans-card {
+.recap-card {
   height: $card-height;
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -22,7 +22,7 @@ $card-height: 150px;
   margin: 5px 15px 10px 15px;
 }
 
-.loans-card .description-loans-card {
+.recap-card .description-recap-card {
   padding: 10px 0px 0px 5px;
   h3 {
     text-align: center;
@@ -31,17 +31,17 @@ $card-height: 150px;
   }
 }
 
-.loans-card .description-loans-card .information-manga{
+.recap-card .description-recap-card .information-manga{
   margin-top: -10px;
   padding: 10px 0px 0px 5px;
 }
 
-.loans-card {
+.recap-card {
   #title-manga {
     opacity: 1;
     transition: 1s;
   }
-  .description-manga {  
+  .description-manga {
     padding: 10px 0px 0px 5px;
     margin-top:-250px;
     opacity: 0;
@@ -55,7 +55,7 @@ $card-height: 150px;
 
 // Css hover description pour le futur
 
-// .loans-card:hover {
+// .recap-card:hover {
 //   #title-manga {
 //     opacity: 0;
 //     transition: 0.5s;
@@ -71,14 +71,14 @@ $card-height: 150px;
 // }
 
 @media (max-width: 1050px){
-  .loans-grid {
+  .recap-grid {
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
   }
 }
 
 @media (max-width: 680px){
-  .loans-grid {
+  .recap-grid {
     grid-template-columns: 1fr;
     grid-gap: 10px;
   }

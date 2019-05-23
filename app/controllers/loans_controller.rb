@@ -6,8 +6,11 @@ class LoansController < ApplicationController
   def create
     @loan = Loan.new(loan_params)
     @loan.user = current_user
-    @loan.manga = Manga.find(params[:manga_id])
+    @manga = Manga.find(params[:manga_id])
+    @loan.manga = @manga
     if @loan.save
+      @manga.loan_state = true
+      @manga.save
       redirect_to users_loans_path
     else
       redirect_to manga_path(@loan.manga)

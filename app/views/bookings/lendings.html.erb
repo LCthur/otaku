@@ -1,2 +1,40 @@
-<h1>Bookings#lendings</h1>
-<p>Find me in app/views/bookings/lendings.html.erb</p>
+<div class="container col-9">
+    <h1>En location</h1>
+</div>
+<div class="col-12">
+  <div class="recap-grid">
+    <% @mangas.each do |manga| %>
+      <% if manga.actually_loaned? %>
+      <div class="recap-card">
+        <%= cl_image_tag manga.photo, class: "img-mangas-card", height: 150, width: 100 %>
+        <div class="description-recap-card">
+        <h3><%= manga.serie_name %>: <%= manga.title %></h3>
+          <p>Loué à: <%= manga.loan.last.user.first_name %> <%= manga.loan.last.user.last_name %></p>
+          <p>Date de location: <%= which_day(manga.loan.last.started_at) %> <%= which_month_downcased(manga.loan.last.started_at) %> <%= which_year(manga.loan.last.started_at) %> </p>
+          <p>Date de retour: <%= date_concat(manga.loan.last.started_at, manga.loan_duration) %> </p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
+</div>
+<div class="container col-9">
+  <h1>Non loués</h1>
+</div>
+<div class="col-12">
+  <div class="recap-grid">
+    <% @mangas.each do |manga| %>
+      <% unless manga.actually_loaned? %>
+      <div class="recap-card">
+        <%= cl_image_tag manga.photo, class: "img-recap-card", height: 150, width: 100 %>
+        <div class="description-recap-card">
+          <h3><%= manga.serie_name %>: <%= manga.title %></h3>
+          <div class="information-manga">
+            <p>Auteur: <%= manga.author %></p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
