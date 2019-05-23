@@ -1,25 +1,11 @@
-let typingTimer;                //timer identifier
-let doneTypingInterval = 3000;  //time in ms (5 seconds)
-const search = document.getElementById('search-bar');
-const spaceFormSearch = document.getElementById('form-search')
-
-//user is "finished typing," do something
-const searchKeyUp = () => {
-    search.addEventListener('keyup', (e) => {
-        console.log(e.currentTarget.value);
-        const inputUser = event.currentTarget.value;
-        clearTimeout(typingTimer);
-        if (inputUser) {
-            typingTimer = setTimeout(doneTyping, doneTypingInterval);
-        } else {
-            inputUser.remove();
-        }
-    });
-};
-
-function doneTyping () {
-    window.location.href = "#cards-product";
-    searchKeyUp();
+const scrollUpByResult = () => {
+    if (location.search) {
+        // window.location.href = "#cards-product";
+        // document.querySelector('#cards-product').scrollIntoView({ 
+        //     behavior: 'smooth' 
+        //   });
+        $('html, body').animate({scrollTop: $('#cards-product').offset().top}, 2000);
+    }
 }
 
-export { doneTyping };
+export { scrollUpByResult };

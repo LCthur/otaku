@@ -1,13 +1,13 @@
 <div class="container" id="index-page">
   <h1 id="title-otaku">Otaku</h1>
   <div id="form-search">
-    <h2>Trouve ton manga depuis n'importe où</h2>
+    <h2>Tu es fan de manga, tu cherche à emprunter ou prêter un manga, tu es à la bonne adresse !</h2>
     <%= form_tag mangas_path, id: "form-bar", method: :get do %>
     <%= text_field_tag :query,
             params[:query],
             id: "search-bar",
             class: "form-control",
-            placeholder: "Chercher mon manga"
+            placeholder: "Entre le manga que tu recherches..."
         %>
     <% end %>
   </div>

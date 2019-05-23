@@ -2,7 +2,18 @@
 h1 {
   color: white;
   border-color: white;
+}
+
+#index-page h1 {
   animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+#index-page h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  width: 700px;
+  margin: 0 auto;
 }
 
 /**
