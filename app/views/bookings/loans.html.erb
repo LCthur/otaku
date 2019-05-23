@@ -2,11 +2,11 @@
   <h1>Mes emprunts</h1>
 </div>
 <div class="col-12">
-  <div class="loans-grid">
+  <div class="recap-grid">
   <% @loans.each do |loan| %>
-      <div class="loans-card">
-        <%= cl_image_tag loan.manga.photo, class: "img-loans-card", height: 150, width: 100 %>
-        <div class="description-loans-card">
+      <div class="recap-card">
+        <%= cl_image_tag loan.manga.photo, class: "img-recap-card", height: 150, width: 100 %>
+        <div class="description-recap-card">
           <h3><%= loan.manga.serie_name %>: <br> <%= loan.manga.title %></h3>
           <div class="information-manga">
             <p>Auteur : <%= loan.manga.author %></p>

@@ -8,7 +8,7 @@ module LendingsHelper
   def date_concat(date_string, duration)
     return_date = returning_date(date_string, duration)
     year = which_year(return_date)
-    month = 'essai'
+    month = which_month_downcased(return_date)
     day = which_day(return_date)
     "#{day} #{month} #{year}"
   end

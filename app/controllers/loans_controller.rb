@@ -9,13 +9,9 @@ class LoansController < ApplicationController
     @manga = Manga.find(params[:manga_id])
     @loan.manga = @manga
     if @loan.save
-<<<<<<< HEAD
       @manga.loan_state = true
       @manga.save
-      redirect_to root_path
-=======
       redirect_to users_loans_path
->>>>>>> master
     else
       redirect_to manga_path(@loan.manga)
     end
