@@ -1,29 +1,30 @@
 <div class="container">
+  <h1 id="title-otaku">Otaku</h1>
   <div id="form-search">
-        <h1>Otaku</h1>
-        <%= form_tag mangas_path,id: "form-bar", method: :get do %>
-          <%= text_field_tag :query,
+    <h2>Trouve ton manga depuis n'importe où</h2>
+    <%= form_tag mangas_path,id: "form-bar", method: :get do %>
+    <%= text_field_tag :query,
             params[:query],
             id: "search-bar",
             class: "form-control",
-            placeholder: "Find a manga"
+            placeholder: "Chercher mon manga"
         %>
-          <i class="fas fa-search"></i> Search
-        <% end %>
+        <i class="fas fa-search icons-search"></i>
+    <% end %>
   </div>
   <% @mangas.each do |manga| %>
   <% unless manga.actually_loaned? %>
-      <div class="card-product">
-        <%= cl_image_tag manga.photo, class: "img-index-card" %>
-          <div class="card-product-infos">
-            <h2><%= manga.serie_name %> - Tome <%= manga.tome_number %> : <%= manga.title %></h2>
-            <span>Auteur : <%= manga.author %></span>
-            <p>Genre : <%= manga.genre %> // Date : <%= manga.publication_date.split('-').first.to_i %></p>
-          </div>
-          <div class="primary-button">
-            <%= link_to 'Voir', manga_path(manga), class: "button-otaku" %>
-          </div>
-      </div>
-    <% end %>
+  <div class="card-product">
+    <%= cl_image_tag manga.photo, class: "img-index-card" %>
+    <div class="card-product-infos">
+      <h2><%= manga.serie_name %> - Tome <%= manga.tome_number %> : <%= manga.title %></h2>
+      <span>Auteur : <%= manga.author %></span>
+      <p>Genre : <%= manga.genre %> // Date : <%= manga.publication_date.split('-').first.to_i %></p>
+    </div>
+    <div class="primary-button">
+      <%= link_to 'Voir', manga_path(manga), class: "button-otaku" %>
+    </div>
+  </div>
+  <% end %>
   <% end %>
 </div>
