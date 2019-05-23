@@ -1,9 +1,9 @@
 import "bootstrap";
 import { flatpickrPageShow, flatpickrPageNewManga } from "../components/date";
-import { searchKeyUp } from "../components/search";
+import { doneTyping } from "../components/search";
 
 if (document.getElementById('index-page')) {
-  searchKeyUp();
+  doneTyping();
 };
 
 if(document.getElementById('show')){
