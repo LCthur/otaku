@@ -9,9 +9,11 @@ class LoansController < ApplicationController
     @manga = Manga.find(params[:manga_id])
     @loan.manga = @manga
     if @loan.save
+      @manga.loan_state = true
+      @manga.save
       respond_to do |format|
         format.html { redirect_to users_loans_path }
-        format.js { render js: "window.location='#{users_loans_path.to_sga}'" }
+        format.js { render js: "window.location='#{users_loans_path.to_s}'" }
       end
     else
       respond_to do |format|
