@@ -1,17 +1,18 @@
-<div class="container" id="show">
+<div class="container margin-bottom-value" id="show">
   <div class="row">
     <div class="col-lg-3">
-    <div class="secondary-data">
-      <div class="img">
-        <p><%= cl_image_tag @manga.photo, height: 400, width: 220 %></p>
-      </div>
+      <div class="secondary-data">
+        <div class="img">
+          <p><%= cl_image_tag @manga.photo, height: 400, width: 220 %></p>
+        </div>
 
-      <ul class="show-secondary-data">
-        <li>Editeur : <%= @manga.editor %></li>
-        <li>Genre : <%= @manga.genre %></li>
-        <li>Date de publication : <%= which_month(@manga.publication_date) %> <%= which_year(@manga.publication_date) %></li>
-        <li>Pages : <%= @manga.pages_number %></li>
-        <li>Langue : <%= @manga.language %></li>
+        <ul class="show-secondary-data">
+          <li>Editeur : <%= @manga.editor %></li>
+          <li>Genre : <%= @manga.genre %></li>
+          <li>Date de publication : <%= which_month(@manga.publication_date) %>
+            <%= which_year(@manga.publication_date) %></li>
+          <li>Pages : <%= @manga.pages_number %></li>
+          <li>Langue : <%= @manga.language %></li>
         </ul>
       </div>
     </div>
@@ -34,14 +35,15 @@
       </div>
     </div>
     <div class="col-lg-3">
-    <div class="action-btn p-3">
-      <p>Durée du prêt :  <span id="loan_duration" data-value="<%= @manga.loan_duration %>"><%= @manga.loan_duration %></span>jours</p>
-      <%= simple_form_for([@manga, @loan]) do |f| %>
+      <div class="action-btn p-3">
+        <p>Durée du prêt : <span id="loan_duration"
+            data-value="<%= @manga.loan_duration %>"><%= @manga.loan_duration %></span>jours</p>
+        <%= simple_form_for([@manga, @loan]) do |f| %>
         <%= f.input :started_at, as: :string, label: 'Date de retrait', class: "dateInput", input_html: { class: "datepicker" }%>
         <p>Date de retour : <span id="returning-date"></span></p>
         <%= f.button :submit, class: "button-otaku", value: 'Emprunter' %>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-  </div>
   </div>
 </div>
