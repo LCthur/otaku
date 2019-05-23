@@ -5,7 +5,6 @@
         <div class="img">
           <p><%= cl_image_tag @manga.photo, height: 400, width: 220 %></p>
         </div>
-
         <ul class="show-secondary-data">
           <li>Editeur : <%= @manga.editor %></li>
           <li>Genre : <%= @manga.genre %></li>
@@ -35,15 +34,19 @@
       </div>
     </div>
     <div class="col-lg-3">
-    <div class="action-btn p-3">
-      <p>Durée du prêt :  <span id="loan_duration" data-value="<%= @manga.loan_duration %>"><%= @manga.loan_duration %></span>jours</p>
-      <%= simple_form_for([@manga, @loan], remote: true) do |f| %>
+      <div class="action-btn p-3">
+        <p>Durée du prêt : <span id="loan_duration"
+            data-value="<%= @manga.loan_duration %>"><%= @manga.loan_duration %></span>jours</p>
+        <%= simple_form_for([@manga, @loan], remote: true) do |f| %>
         <%= f.input :started_at, as: :string, label: 'Date de retrait', class: "dateInput", input_html: { class: "datepicker" } %>
         <div class="errors-message"></div>
         <p>Date de retour : <span id="returning-date"></span></p>
         <%= f.button :submit, class: "button-otaku", value: 'Emprunter' %>
         <% end %>
       </div>
+    </div>
+    <div id="map" style="width: 100%; height: 50%;" data-markers="<%= @markers.to_json %>" 
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
 </div>
