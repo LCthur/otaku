@@ -1,33 +1,15 @@
-.footer {
+.footer{
     background: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 150px;
-    margin-top:50px;
-    padding: 0px 50px;
+    height: 100px;
+    padding: 0px 30px;
     color: rgba(0,0,0,0.3);
   }
-  .footer-links {
-    display: flex;
-    align-items: center;
-  }
-  .footer-links a {
-    color: rgba(0, 0, 0, 0.452);
-    opacity: 0.7;
-    text-decoration: none;
-    font-size: 24px;
-    margin-top:20px;
-    padding: 10px 10px;
-  }
-  .footer-links a:hover {
-    opacity: 1;
-    color:#343a40;
-  }
-  
+
   .footer-copyright p{
-      margin-top:-50px;
       border-top: 1px solid #11091C;
       padding:15px;
       color:#343a40;
