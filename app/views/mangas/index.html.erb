@@ -1,15 +1,15 @@
 <div class="container">
-  <div id="search-form-title">
-    <h1>Otaku</h1>
-  <%= form_tag mangas_path,id: "form-bar", method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      id: "search-bar",
-      class: "form-control",
-      placeholder: "Find a manga"
-    %>
-      <i class="fas fa-search"></i> Search
-  <% end %>
+  <div id="form-search">
+        <h1>Otaku</h1>
+        <%= form_tag mangas_path,id: "form-bar", method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            id: "search-bar",
+            class: "form-control",
+            placeholder: "Find a manga"
+        %>
+          <i class="fas fa-search"></i> Search
+        <% end %>
   </div>
   <% @mangas.each do |manga| %>
   <div class="card-product">
