@@ -13,7 +13,7 @@ class MangasController < ApplicationController
       @markers = 
         [{
           lat: @owner.latitude,
-          lng: @owner.longitude
+          lng: @owner.longitude,
         }]
     end
   end
