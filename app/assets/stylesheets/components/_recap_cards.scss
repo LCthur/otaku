@@ -3,12 +3,13 @@ $card-height: 150px;
 .recap-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 0px;
 }
 
-.recap-card .description-recap-card p {
+.recap-grid .description-recap-card p {
+  font-size: 12px;
   text-align: center;
-  line-height: 7px;
+  line-height: 5px;
 }
 
 .img-recap-card {
@@ -19,14 +20,16 @@ $card-height: 150px;
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
+  justify-content: center;
   margin: 5px 15px 10px 15px;
 }
 
 .recap-card .description-recap-card {
   padding: 10px 0px 0px 5px;
+  width: 100%;
   h3 {
     text-align: center;
-    font-size: 24px !important;
+    font-size: 18px !important;
     padding-bottom:10px;
   }
 }
@@ -36,22 +39,26 @@ $card-height: 150px;
   padding: 10px 0px 0px 5px;
 }
 
-.recap-card {
-  #title-manga {
-    opacity: 1;
-    transition: 1s;
-  }
-  .description-manga {
-    padding: 10px 0px 0px 5px;
-    margin-top:-250px;
-    opacity: 0;
-    transition: 1s;
-  }
-  .information-manga {
-    opacity: 1;
-    transition: 1s;
-  }
+.recap-card .description-manga {
+  opacity: 0;
 }
+
+// .recap-card {
+//   #title-manga {
+//     opacity: 1;
+//     transition: 1s;
+//   }
+//   .description-manga {  
+//     padding: 10px 0px 0px 5px;
+//     margin-top:-250px;
+//     opacity: 0;
+//     transition: 1s;
+//   }
+//   .information-manga {
+//     opacity: 1;
+//     transition: 1s;
+//   }
+// }
 
 // Css hover description pour le futur
 
@@ -70,17 +77,21 @@ $card-height: 150px;
 //   }
 // }
 
-@media (max-width: 1050px){
+@media (max-width: 1200px){
   .recap-grid {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 5px;
   }
 }
 
-@media (max-width: 680px){
+@media (max-width: 840px){
   .recap-grid {
     grid-template-columns: 1fr;
-    grid-gap: 10px;
   }
 }
 
+@media (max-width: 480px){
+  .information-manga {
+    display: none;
+  }
+}
