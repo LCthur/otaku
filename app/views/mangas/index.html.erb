@@ -1,12 +1,16 @@
-  <%= form_tag mangas_path, method: :get do %>
+<div class="container">
+  <div id="search-form-title">
+    <h1>Otaku</h1>
+  <%= form_tag mangas_path,id: "form-bar", method: :get do %>
     <%= text_field_tag :query,
       params[:query],
+      id: "search-bar",
       class: "form-control",
       placeholder: "Find a manga"
     %>
+      <i class="fas fa-search"></i> Search
   <% end %>
-<div class="container">
-  <h1>Otaku</h1>
+  </div>
   <% @mangas.each do |manga| %>
   <div class="card-product">
     <%= cl_image_tag manga.photo, class: "img-index-card" %>
