@@ -11,10 +11,10 @@ class MangasController < ApplicationController
 
     unless @owner.latitude.nil? && @owner.longitude.nil?
       @markers = 
-        {
+        [{
           lat: @owner.latitude,
           lng: @owner.longitude
-        }
+        }]
     end
   end
 
