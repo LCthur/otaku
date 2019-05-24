@@ -3,7 +3,7 @@ const scrollUpByResult = () => {
         // document.querySelector('#cards-product').scrollIntoView({ 
         //     behavior: 'smooth' 
         //   });
-        $('html, body').animate({scrollTop: $('#cards-product').offset().top}, 2000);
+        $('html, body').animate({scrollTop: $('#search-bar-scroll').offset().top}, 2000);
     }
 }
 
