@@ -11,6 +11,7 @@
         %>
     <% end %>
   </div>
+  <div class="container-cards-product">
   <div id="cards-product">
   <% @mangas.each do |manga| %>
   <% unless manga.actually_loaned? %>
@@ -27,4 +28,5 @@
       </div>
     <% end %>
   <% end %>
+  </div>
 </div>
