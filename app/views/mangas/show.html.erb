@@ -6,12 +6,14 @@
           <p><%= cl_image_tag @manga.photo, height: 400, width: 220 %></p>
         </div>
         <ul class="show-secondary-data">
-          <li>Editeur : <%= @manga.editor %></li>
-          <li>Genre : <%= @manga.genre %></li>
-          <li>Date de publication : <%= which_month(@manga.publication_date) %>
-            <%= which_year(@manga.publication_date) %></li>
-          <li>Pages : <%= @manga.pages_number %></li>
-          <li>Langue : <%= @manga.language %></li>
+          <li><%=  empty?(@manga.editor) ? "Editeur : #{@manga.editor}" : '' %></li>
+          <li><%= empty?(@manga.genre) ? "Genre: #{@manga.genre}" : '' %></li>
+          <% if empty?(@manga.publication_date) %>
+            <li>Date de publication : <%= which_month(@manga.publication_date) %>
+              <%= which_year(@manga.publication_date) %></li>
+          <% end %>
+          <li><%= @manga.pages_number.nil? ? '' : "Pages: #{@manga.pages_number}" %></li>
+          <li><%= empty?(@manga.language) ? "Langue: #{@manga.language}" : '' %></li>
         </ul>
       </div>
     </div>

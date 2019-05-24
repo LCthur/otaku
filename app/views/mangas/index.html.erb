@@ -14,17 +14,17 @@
   <div id="cards-product">
   <% @mangas.each do |manga| %>
   <% unless manga.actually_loaned? %>
-  <div class="card-product">
-    <%= cl_image_tag manga.photo, class: "img-index-card" %>
-    <div class="card-product-infos">
-      <h2><%= manga.serie_name %> - Tome <%= manga.tome_number %> : <%= manga.title %></h2>
-      <span>Auteur : <%= manga.author %></span>
-      <p>Genre : <%= manga.genre %> // Date : <%= manga.publication_date.split('-').first.to_i %></p>
-    </div>
-    <div class="primary-button">
-      <%= link_to 'Voir', manga_path(manga), class: "button-otaku" %>
-    </div>
-  </div>
-  <% end %>
+      <div class="card-product">
+        <%= cl_image_tag manga.photo, class: "img-index-card" %>
+          <div class="card-product-infos">
+            <h2><%= manga.serie_name %> - Tome <%= manga.tome_number %> : <%= manga.title %></h2>
+            <span><%= empty?(manga.editor) ? "Editeur : #{manga.editor}" : '' %></span>
+            <p> <%= empty?(manga.genre) ? "Genre: #{manga.genre}" : '' %>  <%="// Date: #{manga.publication_date.split('-').first.to_i}" if empty?(manga.publication_date)%></p>
+          </div>
+          <div class="primary-button">
+            <%= link_to 'Voir', manga_path(manga), class: "button-otaku" %>
+          </div>
+      </div>
+    <% end %>
   <% end %>
 </div>
