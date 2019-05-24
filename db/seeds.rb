@@ -43,7 +43,7 @@ images_urls = %w[g45lspdga2t8smukzshe p73avptyvavdxksu3qms tadcpzyyjff78hifezxg 
     pages_number: rand(200..500),
     language: 'Français',
     user_id: User.all.last.id,
-    loan_duration: rand(10..60)
+    loan_duration: [ 7, 14, 21, 28, 35, 42, 49].sample
   }
   manga = Manga.new(h)
   manga.remote_photo_url = url
