@@ -8,6 +8,8 @@ Ce projet a été réalisé en 1 semaine dans le cadre de la formation du [Wagon
 
 Le site est développé en Ruby 2.4.3 compatible cross plateforme et Rails 5.2.3.
 
+Déploiement: https://otaku-project.herokuapp.com
+
 Pour lancer l'application sur votre ordinateur:
 
 ```
