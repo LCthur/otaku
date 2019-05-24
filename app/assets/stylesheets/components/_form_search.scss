@@ -1,7 +1,7 @@
 #form-search {
     text-align: center;
-    margin-top: 80px;
-    margin-bottom: calc(100% - 450px);
+    margin-top: 10px;
+    margin-bottom: calc(60% - 450px);
     h2 {
         padding: 20px;
     }
@@ -19,7 +19,7 @@
 
 @media (max-width: 992px) {
     #form-search {
-        margin-bottom: calc(100% - 250px);
+        margin-bottom: calc(60% - 250px);
     }
 }
 
@@ -32,13 +32,13 @@
     }
 
     #form-search {
-        margin-bottom: calc(100%);
+        margin-bottom: calc(60%);
     }
   }
 
 @media (max-width: 540px) {
     #form-search {
-        margin-bottom: calc(100% - 100px);
+        margin-bottom: calc(60% - 100px);
     }
 }
 
