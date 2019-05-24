@@ -13,12 +13,13 @@ $card-height: 150px;
 }
 
 .img-recap-card {
-  margin-left:15px;
+  margin-left: 15px;
 }
+
 .recap-card {
   height: $card-height;
   background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   margin: 5px 15px 10px 15px;
@@ -27,14 +28,15 @@ $card-height: 150px;
 .recap-card .description-recap-card {
   padding: 10px 0px 0px 5px;
   width: 100%;
+
   h3 {
     text-align: center;
     font-size: 18px !important;
-    padding-bottom:10px;
+    padding-bottom: 10px;
   }
 }
 
-.recap-card .description-recap-card .information-manga{
+.recap-card .description-recap-card .information-manga {
   margin-top: -10px;
   padding: 10px 0px 0px 5px;
 }
@@ -77,20 +79,20 @@ $card-height: 150px;
 //   }
 // }
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
   .recap-grid {
     grid-template-columns: 1fr 1fr;
     grid-gap: 5px;
   }
 }
 
-@media (max-width: 840px){
+@media (max-width: 840px) {
   .recap-grid {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
   .information-manga {
     display: none;
   }

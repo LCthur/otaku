@@ -11,10 +11,10 @@ const daysLeft = (date, additionalDays) => {
 const flatpickrPageShow = () => {
   flatpickr(".datepicker", {
     "locale": French,
-    minDate : new Date(),
+    minDate: new Date(),
     altInput: true,
     altFormat: "d M Y",
-    onChange: function(dateObj) {
+    onChange: function (dateObj) {
       const additionalDays = parseInt(document.getElementById('loan_duration').dataset.value);
       const d = daysLeft(dateObj[0], additionalDays);
       document.getElementById('returning-date').innerHTML = d.getDate() + " " + months[d.getMonth()] + " " + d.getFullYear();
