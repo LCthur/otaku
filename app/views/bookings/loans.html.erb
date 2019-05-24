@@ -9,7 +9,7 @@
           <div class="information-manga">
             <p>Auteur : <%= loan.manga.author %></p>
             <p>Nombre de pages : <%= loan.manga.pages_number %></p>
-            <p>Loué le : <%= which_day(loan.started_at)%> <%= which_month_downcased(loan.started_at) %> <%= which_year(loan.started_at) %></p>
+            <p>A rendre le : <%=  date_concat(loan.started_at, loan.manga.loan_duration) %></p>
           </div>
           <div class="description-manga">
             <h3>Description du manga :</h3>
