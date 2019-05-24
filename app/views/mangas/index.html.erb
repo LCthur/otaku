@@ -1,6 +1,17 @@
-<div class="container">
-  <h1>Otaku</h1>
-
+<div class="container" id="index-page">
+  <h1 id="title-otaku">Otaku</h1>
+  <div id="form-search">
+    <h2>Tu es fan de manga, tu cherche à emprunter ou prêter un manga, tu es à la bonne adresse !</h2>
+    <%= form_tag mangas_path, id: "form-bar", method: :get do %>
+    <%= text_field_tag :query,
+            params[:query],
+            id: "search-bar",
+            class: "form-control",
+            placeholder: "Entre le manga que tu recherches..."
+        %>
+    <% end %>
+  </div>
+  <div id="cards-product">
   <% @mangas.each do |manga| %>
   <% unless manga.actually_loaned? %>
   <div class="card-product">

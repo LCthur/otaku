@@ -1,7 +1,16 @@
 class MangasController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @mangas = Manga.all
+    if params[:query].present?
+      sql_query = " \
+        mangas.serie_name @@ :query \
+        OR mangas.author @@ :query \
+        OR mangas.title @@ :query \
+      "
+      @mangas = Manga.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @mangas = Manga.all
+    end
   end
 
   def show
