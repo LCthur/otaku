@@ -23,6 +23,7 @@ class MangasController < ApplicationController
         [{
           lat: @owner.latitude,
           lng: @owner.longitude,
+          infoWindow: render_to_string(partial: "infowindow", locals: { owner: @owner })
         }]
     end
   end

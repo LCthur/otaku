@@ -1,3 +1,13 @@
+.mapboxgl-popup {
+  max-width: 500px;
+  z-index: 999;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
 .mapboxgl-ctrl-logo {
   visibility: hidden !important;
 }
