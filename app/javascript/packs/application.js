@@ -8,9 +8,6 @@ if (document.getElementById('index-page')) {
   scrollUpByResult();
 };
 
-initMapbox();
-
-
 if(document.getElementById('show')){
   flatpickrPageShow();
 };
@@ -18,3 +15,6 @@ if(document.getElementById('show')){
 if(document.getElementById('new-manga')){
   flatpickrPageNewManga();
 };
+
+
+initMapbox();
