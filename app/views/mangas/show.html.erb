@@ -46,7 +46,10 @@
         <%= f.button :submit, class: "button-otaku", value: 'Emprunter' %>
         <% end %>
       </div>
-      <div id="map" style="width: 100%; height: 50%;" data-markers="<%= @markers.to_json %>"
+      <div class="px-3 mt-4">
+        <p>Lieu de retrait : </p>
+      </div>
+      <div id="map" class="px-3" style="width: 100%; height: 50%;" data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
     </div>

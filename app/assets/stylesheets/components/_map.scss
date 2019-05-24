@@ -1,10 +1,18 @@
+.mapboxgl-ctrl-logo {
+  visibility: hidden !important;
+}
+
+.mapboxgl-ctrl-bottom-right {
+  visibility: hidden !important
+}
+
 @media (max-width: 1020px) {
 
     /* For a screen < 720px, this CSS will be read */
     .mapboxgl-canvas {
         position: relative !important;
     }
-    
+
     #map {
         justify-content: center;
         width: 100% !important;
