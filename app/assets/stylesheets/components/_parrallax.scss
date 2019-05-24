@@ -1,7 +1,7 @@
 .parrallax {
     margin-top: -100px;
     background-image: url("https://res.cloudinary.com/ddzk8vfke/image/upload/v1558689866/final-valley_jkq38h.jpg");
-    height: 50% !important; 
+    height: 50% !important;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,7 +20,8 @@
 
 #subtitle-otaku {
     text-align: center;
-    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
     margin: 80px 20px 0px 20px!important;
     padding: 20px 100px !important;
 }
@@ -53,4 +54,3 @@
         font-size: 18px !important;
     }
   }
-  
