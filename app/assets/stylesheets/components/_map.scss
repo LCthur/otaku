@@ -1,0 +1,26 @@
+@media (max-width: 1020px) {
+
+    /* For a screen < 720px, this CSS will be read */
+    .mapboxgl-canvas {
+        position: relative !important;
+    }
+    
+    #map {
+        justify-content: center;
+        width: 100% !important;
+        margin-bottom: 100px !important;
+    }
+  }
+
+  @media (max-width: 528px) {
+
+    /* For a screen < 720px, this CSS will be read */
+    .mapboxgl-canvas {
+        position: relative !important;
+    }
+
+    #map {
+        justify-content: center;
+        width: 80% !important;
+    }
+  }

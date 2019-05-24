@@ -1,37 +1,32 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-inner navbar-lewagon">
-
-
-  <button class="navbar-toggler color-toggle" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler color-toggle" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon color-toggle"></span>
   </button>
-
   <div id="home-title" class="mx-3">
     <%= link_to "Otaku", root_path, class: "button-otaku-dark" %>
   </div>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mx-auto navbar-mobile align-items-center">
-      <li class="nav-item spacing-items">
-        <%= link_to "Louer", new_manga_path, class: "button-otaku-no-border clear" %>
-      </li>
-      <li class="nav-item spacing-items">
-        <%= link_to "Emprunter", users_loans_path, class: "button-otaku-no-border clear" %>
-      </li>
       <% if user_signed_in? %>
-        <li class="nav-item spacing-items">
-          <div class="dropdown-toggle button-otaku" id="navbarDropdown" data-toggle="dropdown">
+      <li class="nav-item spacing-items">
+        <div class="dropdown-toggle button-otaku" id="navbarDropdown" data-toggle="dropdown">
           <%= current_user.first_name %>
-          </div>
-            <div class="dropdown-menu dropdown-menu-right button-otaku" aria-labelledby="navbarDropdown">
-                <%= link_to "Mes locations", users_loans_path, class: "dropdown-item" %>
-                <%= link_to "Another action", "#", class: "dropdown-item" %>
-                <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "dropdown-item" %>
-            </div>
-        </li>
-        <% else %>
-            <li class="nav-item spacing-items">
-                <%= link_to "Se connecter", new_user_session_path, class: "button-otaku" %>
-            </li>
+        </div>
+        <div class="dropdown-menu dropdown-menu-right button-otaku" aria-labelledby="navbarDropdown">
+          <%= link_to "Mes emprunts", users_loans_path, class: "dropdown-item" %>
+
+          <%= link_to "Mes mangas", users_lendings_path, class: "dropdown-item" %>
+
+          <%= link_to "Prêter un manga", new_manga_path, class: "dropdown-item" %>
+
+          <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "dropdown-item" %>
+        </div>
+      </li>
+      <% else %>
+      <li class="nav-item spacing-items">
+        <%= link_to "Se connecter", new_user_session_path, class: "button-otaku" %>
+      </li>
       <% end %>
     </ul>
   </div>

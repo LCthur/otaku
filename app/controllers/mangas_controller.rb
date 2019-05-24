@@ -1,12 +1,30 @@
 class MangasController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @mangas = Manga.all
+    if params[:query].present?
+      sql_query = " \
+        mangas.serie_name @@ :query \
+        OR mangas.author @@ :query \
+        OR mangas.title @@ :query \
+      "
+      @mangas = Manga.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @mangas = Manga.all
+    end
   end
 
   def show
     @manga = Manga.find(params[:id])
     @loan = Loan.new
+    @owner = User.find(@manga.user_id)
+
+    unless @owner.latitude.nil? && @owner.longitude.nil?
+      @markers = 
+        [{
+          lat: @owner.latitude,
+          lng: @owner.longitude,
+        }]
+    end
   end
 
   def new
@@ -24,6 +42,6 @@ class MangasController < ApplicationController
   end
 
   def manga_params
-    params.require(:manga).permit(:photo, :title, :photo_cache, :description, :author, :editor, :publication_date, :serie_name, :tome_number, :genre, :pages_number, :language)
+    params.require(:manga).permit(:photo, :title, :photo_cache, :description, :author, :editor, :publication_date, :serie_name, :tome_number, :genre, :pages_number, :language, :loan_duration)
   end
 end
