@@ -13,34 +13,37 @@
 }
 
 .navbar-inner {
-  background-color:   transparent;
-  color:             #11091C;
+  background-color: transparent;
+  color: #11091C;
 }
 
 .navbar-inner a {
-  color:             #11091C;
+  color: #11091C;
+
   &:hover {
-    color:           #fff !important;
+    color: #fff !important;
   }
 }
 
 .spacing-items {
-  margin-right:    50px;
+  margin-right: 50px;
 }
 
 .avatar {
-  margin-right:20px;
+  margin-right: 20px;
 }
 
-.navbar-nav > li .dropdown-menu {
+.navbar-nav>li .dropdown-menu {
   background-color: #11091C;
   // margin:0 auto;
 }
-.navbar-nav > li .dropdown-menu > a{ 
+
+.navbar-nav>li .dropdown-menu>a {
   background-color: #11091C;
-  color:white !important;
-  text-align:center;
+  color: white !important;
+  text-align: center;
   opacity: .7;
+
   &:hover {
     opacity: 1;
   }
@@ -49,15 +52,17 @@
 #home-title {
   font-weight: 900;
   text-decoration: none;
+
   &a {
     color: white;
   }
 }
 
 @media (max-width: 720px) {
+
   /* For a screen < 720px, this CSS will be read */
   .navbar-mobile {
     text-align: center;
-    margin:0 auto;
+    margin: 0 auto;
   }
 }

@@ -16,6 +16,15 @@ class MangasController < ApplicationController
   def show
     @manga = Manga.find(params[:id])
     @loan = Loan.new
+    @owner = User.find(@manga.user_id)
+
+    unless @owner.latitude.nil? && @owner.longitude.nil?
+      @markers = 
+        [{
+          lat: @owner.latitude,
+          lng: @owner.longitude,
+        }]
+    end
   end
 
   def new

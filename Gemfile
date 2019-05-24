@@ -10,6 +10,8 @@ gem 'redis'
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
 gem 'flatpickr_rails'
+gem 'geocoder'
+
 
 gem 'devise'
 gem 'tzinfo-data'
