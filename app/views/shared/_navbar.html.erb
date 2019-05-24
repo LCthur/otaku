@@ -1,10 +1,10 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-inner navbar-lewagon">
+<div class="navbar fixed-top navbar-expand-sm navbar-light navbar-inner navbar-lewagon">
   <button class="navbar-toggler color-toggle" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon color-toggle"></span>
   </button>
   <div id="home-title" class="mx-3">
-    <%= link_to "Otaku", root_path, class: "button-otaku-dark" %>
+    <%= link_to "Otaku", root_path, class: "button-otaku" %>
   </div>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mx-auto navbar-mobile align-items-center">
@@ -20,7 +20,7 @@
 
           <%= link_to "Prêter un manga", new_manga_path, class: "dropdown-item" %>
 
-          <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "dropdown-item" %>
+          <%= link_to "Se déconnecter", destroy_user_session_path, :method => :delete, class: "dropdown-item" %>
         </div>
       </li>
       <% else %>
