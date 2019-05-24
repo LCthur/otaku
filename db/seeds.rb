@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
+
+puts 'Starting API...'
+
 
 puts 'Cleaning database...'
 Manga.destroy_all
@@ -18,7 +22,7 @@ h = {
   password_confirmation: 'tototiti',
   phone_number: '+41799999999',
   email: 'toto@titi.com',
-  address: 'Rue du Saut-a-lelastic 1'
+  address: 'Chemin du Closel 5, 1020 Renens'
 }
 
 User.create!(h)
@@ -42,7 +46,7 @@ images_urls = %w[g45lspdga2t8smukzshe p73avptyvavdxksu3qms tadcpzyyjff78hifezxg 
     pages_number: rand(200..500),
     language: 'Français',
     user_id: User.all.last.id,
-    loan_duration: rand(10..60)
+    loan_duration: [7, 14, 21, 28, 35, 42, 49].sample
   }
   manga = Manga.new(h)
   manga.remote_photo_url = url
