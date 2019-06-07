@@ -1,4 +1,4 @@
-# Craftwork
+# Otaku
 
 Ce projet a été réalisé en 1 semaine dans le cadre de la formation du [Wagon Lausanne](https://www.lewagon.com/) batch #249 mai 2019 par:
 
